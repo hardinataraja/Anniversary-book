@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Anniversary Musa & Desy - Buku Cinta</title>
+<style>
+:root{
+  --book-w:300px;--book-h:320px;
+  --bg1:#1e1e1e;--bg2:#3a3a3a;
+  --cover-grad:linear-gradient(135deg,#ff66cc,#cc33ff,#ff0099);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  font-family:'Poppins',sans-serif;overflow:hidden;color:#fff;
+}.header{ flex:0 0 auto;text-align:center;margin-top:10px; } .header img{ max-width:300px;width:80%;height:auto;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(255,255,255,0.3)); }
+
+.main{ flex:1;display:flex;align-items:center;justify-content:center;margin-bottom:20px; }
+
+.book-wrap{position:relative;width:var(--book-w);height:var(--book-h);perspective:2000px;} .book{width:100%;height:100%;position:relative;transform-style:preserve-3d;} .sheet{position:absolute;top:0;left:50%;width:50%;height:100%;transform-origin:left center; transform-style:preserve-3d;transition:transform 900ms cubic-bezier(.2,.9,.25,1);} .sheet.flipped{transform:rotateY(-180deg);} .face{position:absolute;top:0;left:0;width:100%;height:100%;backface-visibility:hidden; display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px; background:#fff;border-radius:8px;box-shadow:0 10px 25px rgba(0,0,0,0.3);text-align:center;} .face.back{transform:rotateY(180deg);}
+
+.cover-front,.cover-back{ width:100%;height:100%;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center; background:var(--cover-grad);color:#fff;position:relative;overflow:hidden;text-shadow:0 2px 10px rgba(0,0,0,0.25); } .cover-front .heart{font-size:50px;margin-bottom:10px;animation:pulse 2s infinite alternate;} .cover-front h2{font-size:18px;margin:6px 0;} .cover-front p{font-size:12px;opacity:.95;margin-top:6px} @keyframes pulse{from{transform:scale(1);}to{transform:scale(1.12);}}
+
+.spine{ position:absolute;left:0;top:0;width:10px;height:100%;background:linear-gradient(180deg,#d17fff,#fa9edb); border-top-left-radius:8px;border-bottom-left-radius:8px;box-shadow:inset -2px 0 6px rgba(0,0,0,0.15); display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-size:9px; writing-mode:vertical-rl;text-orientation:mixed;text-transform:uppercase;z-index:5; } .spine span{transform:rotate(180deg);}
+
+.page-title{color:#b0006d;font-weight:700;font-size:16px;margin-bottom:8px;} .page-text{font-style:italic;line-height:1.5;color:#333;max-width:90%;} img.page-img{max-width:85%;max-height:180px;border-radius:8px;margin-top:12px;box-shadow:0 8px 20px rgba(0,0,0,0.3);object-fit:cover;}
+
+.music-btn{position:fixed;right:12px;bottom:14px;background:rgba(255,255,255,0.9);border:none;padding:8px 12px;border-radius:20px;box-shadow:0 6px 18px rgba(0,0,0,0.25);cursor:pointer;z-index:600;}
+
+#theEnd{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:flex;align-items:center;justify-content:center;flex-direction:column;opacity:0;pointer-events:none;z-index:999;transition:opacity 1.5s ease;color:#fff;} #theEnd.show{opacity:1;}#theEnd h1{font-size:32px;color:#ff69b4;font-weight:600;}#theEnd p{font-size:14px;color:#ccc;}
+
+@media(max-width:420px){:root{--book-w:90vw;--book-h:60vh;}} </style>
+
+</head>
+<body>
+<div class="header">
+  <img src="https://i.postimg.cc/qMZrXGnH/1000105606-removebg-preview.png" alt="Happy Anniversary Musa & Desy">
+</div>
+<div class="main">
+  <div class="book-wrap" id="bookWrap">
+    <div class="spine"><span>To My Queen 💕</span></div>
+    <div class="book" id="book">
+      <div class="sheet" data-index="0">
+        <div class="face front">
+          <div class="cover-front">
+            <div class="heart">❤</div>
+            <h2>Book Of Love</h2>
+            
+          </div>
+        </div>
+        <div class="face back">
+          <div class="page-title">1</div>
+          <div class="page-text">Kamu adalah alasan di balik setiap senyumku, dan tempat paling nyaman untuk hatiku berlabuh.</div>
+          <img class="page-img" src="https://i.postimg.cc/tJ5N2pJC/1762704895033.jpg" alt="Foto placeholder">
+        </div>
+      </div>
+      <div class="sheet" data-index="1">
+        <div class="face front">
+          <div class="page-title">2</div>
+          <div class="page-text">Setiap detik bersamamu terasa seperti bait indah dalam puisi cinta yang tak pernah usai.</div>
+          <img class="page-img" src="https://i.postimg.cc/YCVfXXrX/1762704858592.jpg" alt="Foto placeholder">
+        </div>
+        <div class="face back">
+          <div class="page-title">3</div>
+          <div class="page-text">Aku tak butuh kata manis dari dunia, cukup tatapanmu yang membuat segalanya sempurna.</div>
+          <img class="page-img" src="https://i.postimg.cc/3x6CLL8S/1762704884013.jpg" alt="Foto placeholder">
+        </div>
+      </div>
+      <div class="sheet" data-index="2">
+        <div class="face front">
+          <div class="page-title">4</div>
+          <div class="page-text">Cintaku padamu bukan sekadar janji, tapi doa yang selalu kusebut di setiap sujudku.</div>
+          <img class="page-img" src="https://i.postimg.cc/mgqNddL6/1762704838434.jpg" alt="Foto placeholder">
+        </div>
+        <div class="face back">
+          <div class="page-title">5</div>
+          <div class="page-text">Bersamamu aku belajar, bahwa rumah bukan tempat — tapi seseorang.</div>
+          <img class="page-img" src="https://i.postimg.cc/6pSLHHWY/1762704848633.jpg" alt="Foto placeholder">
+        </div>
+      </div>
+      <div class="sheet" data-index="3">
+        <div class="face front">
+          <div class="page-title">6</div>
+          <div class="page-text">Kau datang membawa warna, mengubah hidupku yang dulu abu-abu jadi pelangi yang hangat.</div>
+          <img class="page-img" src="https://i.postimg.cc/wBm5nhMZ/1762704644179.jpg" alt="Foto placeholder">
+        </div>
+        <div class="face back">
+          <div class="page-title">7</div>
+          <div class="page-text">Setiap genggaman tanganmu menenangkan, seolah dunia berhenti hanya untuk kita berdua.</div>
+          <img class="page-img" src="https://i.postimg.cc/CKqC9j53/1762704629802.jpg" alt="Foto placeholder">
+        </div>
+      </div>
+      <div class="sheet" data-index="4">
+        <div class="face front">
+          <div class="page-title">8</div>
+          <div class="page-text">Aku tak tahu apa arti takdir, sampai Tuhan mempertemukanku denganmu.</div>
+          <img class="page-img" src="https://i.postimg.cc/hjnWxvX3/IMG-20250115-102905.jpg" alt="Foto placeholder">
+        </div>
+        <div class="face back">
+          <div class="page-title">9</div>
+          <div class="page-text">Jika cinta adalah bahasa, maka namamulah kalimat paling indah yang kutulis setiap hari.</div>
+          <img class="page-img" src="https://i.postimg.cc/nhMHcXmr/IMG-20250720-WA0005.jpg" alt="Foto placeholder">
+        </div>
+      </div>
+      <div class="sheet" data-index="5">
+        <div class="face front">
+          <div class="page-title">10</div>
+          <div class="page-text">Tak perlu kata banyak, cukup kamu di sini, itu sudah lebih dari cukup untukku.</div>
+          <img class="page-img" src="https://i.postimg.cc/RCWyVZ84/IMG-20250104-163842-294.webp" alt="Foto placeholder">
+        </div>
+        <div class="face back">
+          <div class="page-text" style="font-size:16px;color:#b0006d;">
+            <div style="font-size:22px;color:#ff1493;">❤️</div>
+            <b>Untukmu, Sayangku</b><br><br>
+            Terima kasih telah menjadi bagian terbaik dalam hidupku.<br>
+            Semoga cinta kita selalu diberkati.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><div id="theEnd">
+  <h1>The End 💌</h1>
+  <p>Terima kasih telah menemaniku 6 tahun ini.</p>
+  <p>Happy Anniversary.</p>
+</div>
+<audio id="bgAudio" autoplay loop muted>
+  <source src="https://cool-black-fby8hivdx4.edgeone.app/SamSonS%20-%20Di%20Ujung%20Jalan%20(Official%20Music%20Video)_1.mp3" type="audio/mpeg">
+</audio>
+<button class="music-btn" id="musicBtn">🔇 Musik</button>
+<script>
+const sheets=[...document.querySelectorAll('.sheet')];
+const bookWrap=document.getElementById('bookWrap');
+const audio=document.getElementById('bgAudio');
+const musicBtn=document.getElementById('musicBtn');
+const theEnd=document.getElementById('theEnd');
+let flippedCount=0;
+sheets.forEach((s,i)=>{s.dataset.z=sheets.length-i;s.style.zIndex=s.dataset.z;});
+function flipNext(){if(flippedCount>=sheets.length)return;const s=sheets[flippedCount];s.style.zIndex=1000+flippedCount;s.classList.add('flipped');flippedCount++;if(flippedCount===sheets.length){setTimeout(()=>theEnd.classList.add('show'),1500);}}
+function flipPrev(){if(flippedCount<=0)return;flippedCount--;const s=sheets[flippedCount];s.classList.remove('flipped');setTimeout(()=>{s.style.zIndex=s.dataset.z;},900);if(flippedCount<sheets.length){theEnd.classList.remove('show');}}
+bookWrap.addEventListener('click',e=>{const rect=bookWrap.getBoundingClientRect();const mid=rect.left+rect.width/2;e.clientX>=mid?flipNext():flipPrev();if(audio.paused)audio.play().catch(()=>{});});
+let startX=null;bookWrap.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;},{passive:true});
+bookWrap.addEventListener('touchend',e=>{const endX=e.changedTouches[0].clientX;const dx=endX-startX;if(Math.abs(dx)>40){dx<0?flipNext():flipPrev();}startX=null;if(audio.paused)audio.play().catch(()=>{});});
+musicBtn.addEventListener('click',()=>{audio.muted=!audio.muted;musicBtn.textContent=audio.muted?'🔇 Musik':'🔊 Musik';audio.play().catch(()=>{});});
+</script>
+</body>
+</html>
